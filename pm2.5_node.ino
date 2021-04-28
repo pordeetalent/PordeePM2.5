@@ -55,9 +55,11 @@ void setup() {
  
 void loop() {
   pm();
-  bodytemp(); 
+  bodytemp();
+  valueSend(); 
   delay(1000);
 }
+
 void pm() {
   int index = 0;
   char value;
@@ -114,4 +116,10 @@ void bodytemp() {
 //  Serial.print(mlx.readObjectTempF()); Serial.println("*F");
 
   Serial.println("");
+}
+
+void valueSend() {
+  client.publish((mqtt_topic), (pm2_5));
+  Serial.println("Send !");
+  return;
 }
