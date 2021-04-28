@@ -1,3 +1,38 @@
+/*
+  Pordee PM2.5 Checker
+
+  Project for Digital Economy Promotion Agency (depa) to get tempurature and PM2.5
+
+  The circuit:
+  * list the components attached to each input
+  * list the components attached to each output
+
+  Created 27 April 2021
+  By Sirapol Nokyoongthong
+  Modified 28 April 2021
+  By Sira Nokyoongthong
+
+  http://sirapol.nokyoongthong.com
+
+*/
+
+//start Config network and mqtt
+#include <ESP8266WiFi.h>
+#include <PubSubClient.h>
+
+// Update these with values suitable for your network.
+const char* ssid = "SunNET";
+const char* password = "maramara";
+
+// Config MQTT Server
+#define mqtt_server "202.139.197.40"
+#define mqtt_port "1883"
+#define mqtt_user "hapybot"
+#define mqtt_password "Depa@1234"
+#define mqtt_topic "temi4-temp"
+#define mqtt_type "publish"
+//end Config network and mqtt
+
 #include <SoftwareSerial.h>
 
 #include <Wire.h>
