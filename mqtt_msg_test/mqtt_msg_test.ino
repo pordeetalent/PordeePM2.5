@@ -43,7 +43,7 @@ void setup() {
   }
  
   client.publish("temi4", "hello"); //Topic name
-  client.subscribe("esp/test");
+  client.subscribe("temi4");
  
 }
  
